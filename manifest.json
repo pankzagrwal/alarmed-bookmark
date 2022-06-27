@@ -24,6 +24,7 @@
       "commands": {
         "_execute_action": {
           "suggested_key": {
+              "default": "Ctrl+Shift+G",
               "mac": "Shift+MacCtrl+G"
             },
           "description" : "Start the extension"
