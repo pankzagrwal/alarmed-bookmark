@@ -1,0 +1,27 @@
+#alarm-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#alarm-table td,
+#alarm-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#alarm-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#alarm-table tr:hover {
+  background-color: #ddd;
+}
+
+#alarm-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2596be;
+  color: white;
+}

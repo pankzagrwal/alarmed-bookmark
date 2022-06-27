@@ -1,0 +1,62 @@
+body {
+  width: 250px;
+  height: 250px;
+}
+
+.alarm-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.alarm-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.alarm-container form label {
+  color: rgb(139, 127, 127);
+}
+
+.alarm-container form button {
+  padding: 10px;
+}
+
+.alarm-container .form-input {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.alarm-container .hide {
+  display: none;
+}
+
+@keyframes anim {
+  from {
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+  }
+  to {
+    width: 16px;
+    height: 16px;
+    background-size: auto;
+  }
+}
+
+.alarm-container .ok {
+  background: url("ok.png");
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+}
+
+.alarm-container .animation {
+  animation: anim 1s;
+}
+
+.alarm-container .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
