@@ -44,7 +44,7 @@ body {
 }
 
 .alarm-container .ok {
-  background: url("ok.png");
+  background: url("../icons/ok.png");
   background-repeat: no-repeat;
   height: 16px;
   width: 16px;

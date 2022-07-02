@@ -43,7 +43,7 @@ chrome.alarms.onAlarm.addListener(function (res) {
           contextMessage: `Click to read the article`,
           message: meta.title,
           type: "basic",
-          iconUrl: "/icon.png",
+          iconUrl: "icons/icon.png",
           priority: 1,
           requireInteraction: true,
         },
