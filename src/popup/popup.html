@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./flatpickr.css">
+    <script src="./flatpickr.js"></script>
     <link rel="stylesheet" href="popup.css">
   </head>
   <body>
-    <div class="alarm-container">
-        <div class="header">
-            <h3>Set Alarm to revisit</h3>
-            <div id="ok-icon" class="ok hide"></div>
-        </div>
-        <form id="alarm-form">
-            <label for="alarm-date"ß>Date</label>
-            <input class="form-input" type="date" id='alarm-date' />
-            <label for="alarm-date">Time</label>
-            <input class="form-input" type="time" id="alarm-time" disabled />
-            <button type="submit" id="form-submit">Save</button>
-        </form>
 
-    </div>
+    <div class="container">
+      <img class = 'logo' src="./icon.png" alt='alarmed bookmark logo'/>
+      <form class="form" id="alarm-form">
+        <h2>Set Alarm to revisit</h2>
+        <div class="form-group">
+          <input type="text" id="date" name="date" placeholder="Select Date and Time" readonly>
+        </div>
+  
+        <!-- <div class="form-group">
+          <div class="custom-select">
+            <select id="quick-time" name="quick-time">
+              <option value="">Select Quick Reminder</option>
+              <option value="half-hour">After Half an Hour</option>
+              <option value="one-hour">After One Hour</option>
+              <option value="tomorrow">Tommorrow</option>
+            </select>
+          </div>
+        </div> -->
+        <button type="submit" class="save-button">Save</button>
+      </form>
+      
+      <div id="ok-icon" class="ok hide">
+        <p>Alarm set for the site.</p>
+      </div>
+      
+      <div class="options-link">
+        <a href="../options/options.html" target="_blank">Manage all Alarmed Sites !</a>
+      </div>
+      <div id="subscriptionContainer" class="subscription-container">
+          <p class="donate">
+              Do you like this free project?
+              <a href="https://chromewebstore.google.com/detail/alarmed-bookmark/jkhnlbnfjlclkanjkjlilpedadnoigab?utm_source=extensionFeedback" target="_blank">Please provide feedback</a>
+              <span>
+                <a href="https://www.buymeacoffee.com/pankz" target="_blank" class="coffee-button">Buy Me a Coffee!</a>
+                <a href="https://paypal.me/pankzpay?country.x=IN&locale.x=en_GB" target="_blank" class="coffee-button">PayPal Me</a>
+              </span>
+          </p>
+      </div>
 
     <script src="popup.js"></script>
   </body>

@@ -3,8 +3,7 @@ let website;
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   if (message.name === "createAlarm") {
     const date = message.date;
-    const time = message.time;
-    const alarmTime = new Date(`${date} ${time}`);
+    const alarmTime = new Date(date);
     const timeStamp = alarmTime.getTime();
 
     chrome.tabs.query({ active: true }, function (tabs) {
@@ -17,7 +16,6 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
           favIconUrl,
           url,
           date,
-          time,
         };
         chrome.storage.sync.set({ alarmedURL: data }, function () {});
       });

@@ -44,7 +44,7 @@
 
       //create alarmed time
 
-      const time = `${item.date} ${item.time}`;
+      const time = `${item.date} `;
       tdTime.innerHTML = time;
       tr.appendChild(tdTime);
 
