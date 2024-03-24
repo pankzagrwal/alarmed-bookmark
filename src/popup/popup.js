@@ -8,8 +8,6 @@
 
   const alarmForm = document.getElementById("alarm-form");
 
-  const formButton = document.getElementById("form-submit");
-
   const iconButton = document.getElementById("ok-icon");
 
   chrome.tabs.query({ active: true }, function (tabs) {
@@ -20,7 +18,7 @@
       const alarmedDate = new Date(date);
       const current = new Date();
       if (date) {
-        if (alarmDate > current) {
+        if (alarmedDate > current) {
           alarmDate.setDate(new Date(date));
           iconButton.classList.remove("hide");
         } else {
@@ -37,6 +35,7 @@
   alarmForm.addEventListener("submit", function (evt) {
     evt.preventDefault();
     const date = alarmDate.latestSelectedDateObj.toString();
+
     chrome.runtime.sendMessage(
       {
         name: "createAlarm",
